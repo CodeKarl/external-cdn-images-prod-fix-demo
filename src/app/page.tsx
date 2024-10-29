@@ -4,6 +4,22 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        {/* Requires sharp package to work in production build: https://nextjs.org/docs/messages/sharp-missing-in-production */}
+        {/* Also add the remote patterns to next.config.mjs: https://nextjs.org/docs/app/api-reference/components/image#remotepatterns */}
+        <Image
+          src="https://images.unsplash.com/photo-1720048171209-71f6fc3d7ea4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Test Image External"
+          width={120}
+          height={120}
+        />
+        {/* Unoptimized example that always works for reference */}
+        <Image
+          src="https://images.unsplash.com/photo-1720048171209-71f6fc3d7ea4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Test Image External"
+          width={120}
+          height={120}
+          unoptimized
+        />
         <Image
           className="dark:invert"
           src="https://nextjs.org/icons/next.svg"
